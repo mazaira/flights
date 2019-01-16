@@ -30,14 +30,8 @@ class Flight
     chances
 
     common = chances.first.values & chances.second.values
-    puts "first"
-    puts "#{chances.first.values.each{|x| @places.each{|place| next unless place['PlaceId'] === x;puts place['Name']}}}"
-
-    puts "second"
-    puts "#{chances.second.values}"
 
     results = get_cheapest(common, chances)
-    puts "#{results}"
     results.each do |result|
       @places.each do |place|
         next unless place['PlaceId'] === result[3]
