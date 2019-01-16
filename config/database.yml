@@ -1,0 +1,13 @@
+default: &default
+  adapter: mysql2
+  timeout: 5000
+  host: 'localhost'
+  username: 'root'
+  password: 'dummy'
+
+development:
+  <<: *default
+  database: flights_development
+test:
+  <<: *default
+  database: flights_test
